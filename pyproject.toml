@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "picpy"
+version = "0.1.0"
+description = ""
+authors = ["Blackgolyb <andrejomelnickij@gmail.com>"]
+readme = "README.md"
+
+packages = [
+    { include = "scripts" },
+    { include = "widgets", from = "src" },
+    { include = "ui", from = "src" },
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numba = "^0.57.1"
+pyqt5 = "^5.15.9"
+scikit-image = "^0.21.0"
+matplotlib = "^3.7.2"
+
+
+[tool.poetry.scripts]
+convert-ui = "scripts.convert_ui:convert_ui_file_to_python"
+blackify = "scripts.blackify:blackify"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
