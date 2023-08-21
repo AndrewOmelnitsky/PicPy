@@ -23,6 +23,7 @@ matplotlib = "^3.7.2"
 [tool.poetry.scripts]
 convert-ui = "scripts.convert_ui:convert_ui_file_to_python"
 blackify = "scripts.blackify:blackify"
+start = "src.main:main"
 
 
 [tool.poetry.group.dev.dependencies]
