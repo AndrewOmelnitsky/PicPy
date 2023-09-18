@@ -1851,6 +1851,7 @@ class EffectManagerWidget(QWidget):
     def add_effect(self, name, effect, *, idx=-2, set_name=True):
         raw_name = name
         i = 0
+
         while name in self.effects:
             name = f"{raw_name} ({i})"
             i += 1
@@ -1868,7 +1869,7 @@ class MyUi_MainWindow(Ui_MainWindow):
     def setupUi(self, MainWindow, *args, **kwargs):
         super().setupUi(MainWindow, *args, **kwargs)
 
-        MainWindow.setWindowTitle("PyMage")
+        MainWindow.setWindowTitle("PicPy")
         parent = self.editorMenu.parent()
         sip.delete(self.editorView)
         self.editorView = EditorView(parent)
